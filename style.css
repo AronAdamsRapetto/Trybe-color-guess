@@ -22,7 +22,7 @@ header {
   margin: 5px;
 }
 
-#answer, #score {
+#answer , #score {
   font-size: 20px;
   font-style: italic;
   font-weight: 700;
