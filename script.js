@@ -1,11 +1,18 @@
 const boxCores = document.getElementById('box-ballCores');
 const btnReset = document.getElementById('reset-game');
+let contadorPontos = 0;
+
+function contadorScore() {
+  contadorPontos += 3;
+  document.getElementById('score').innerText = `${contadorPontos} Pontos`;
+}
 
 function verificaResposta(event) {
   const resposta = document.getElementById('answer');
   const rgbColor = document.getElementById('rgb-color');
   if (event.target.style.backgroundColor === `rgb${rgbColor.innerText}`) {
     resposta.innerText = 'Acertou!';
+    contadorScore();
   } else {
     resposta.innerText = 'Errou! Tente novamente!';
   }
